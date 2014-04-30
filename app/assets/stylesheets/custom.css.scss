@@ -1,2 +1,10 @@
 @import "font-awesome";
 @import "bootstrap";
+
+$grayLighter: #eaeaea;
+
+footer {
+  margin-top: 1em;
+  padding-top: 0.2em;
+  border-top: 1px solid $grayLighter; 
+}
