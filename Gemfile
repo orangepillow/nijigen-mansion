@@ -30,6 +30,16 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'spring',        group: :development
 group :development, :test do
+  gem "timecop"
+  gem "factory_girl_rails"
+  gem "ffaker"
+  gem "spring-commands-rspec"
+  gem "rspec-rails"
+  gem "guard-rspec"
+  gem 'sqlite3'
+end
+
+group :development do
   gem "hirb"
   gem "hirb-unicode"
   gem "pry-rails"
@@ -38,15 +48,8 @@ group :development, :test do
   gem "pry-stack_explorer"
   gem "better_errors"
   gem "quiet_assets"
-  gem "timecop"
-  gem "factory_girl_rails"
-  gem "ffaker"
-  gem "spring-commands-rspec"
-  gem "rspec-rails"
-  gem "guard-rspec"
   gem "rack-mini-profiler"
   gem "foreman"
-  gem 'sqlite3'
 end
 
 group :test do
