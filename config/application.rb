@@ -11,6 +11,7 @@ module NijigenMansion
     
     config.active_record.default_timezone = :local
     config.time_zone = 'Tokyo'
+    I18n.enforce_available_locales = false
     config.i18n.default_locale = :ja
 
     config.generators do |g|
