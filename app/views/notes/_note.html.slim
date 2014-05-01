@@ -1,8 +1,18 @@
 .note
-  .row
-    .col-md-2
-       span.room_id = "Room:#{note.room_id}"
-       | _
-       span.note_id = "Note:#{note.id}"
-    .col-md-10
-       h2.note_title = note.title
+  .note__header
+    .row
+      .col-md-3
+        span.room_id = "Room:#{note.room_id}"
+        | _
+        span.note_id = "Note:#{note.id}"
+      .col-md-9
+        h2.note_title = note.title
+  .note__body
+    .post
+      .row
+        .col-md-3
+          span.author = "Name: #{note.posts.first.author}"
+        .col-md-6
+          span.context = note.posts.first.content
+        .col-md-3
+          span.created_at = "#{time_ago_in_words(note.posts.first.created_at)}前"
