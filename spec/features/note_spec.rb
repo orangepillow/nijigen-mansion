@@ -5,9 +5,11 @@ feature 'Note' do
     visit root_path
     expect {
       click_link '書く'
-      fill_in 'Title', with: 'Joe'
+      fill_in 'Title', with: 'Diary'
+      fill_in 'Author', with: 'Joe'
+      fill_in 'Content', with: 'Lorem ipsum'
       click_button '登録する'
-    }.to change(Note, :count).by(1)
+    }.to change(Note, :count).by(1) 
   end
 
   scenario 'add a new note without title' do
