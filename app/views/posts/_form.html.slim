@@ -1,0 +1,6 @@
+== simple_form_for @post, html: { :class => 'form-horizontal' } do |f|
+  == f.input :author
+  == f.hidden_field :note_id, value: '1'
+  div.form-actions
+    = f.button :submit, :class => 'btn-primary'
+        

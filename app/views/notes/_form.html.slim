@@ -1,6 +1,10 @@
-== simple_form_for @note, html: { :class => 'form-horizontal' } do |f|
+= simple_form_for @note, html: { :class => 'form-horizontal' } do |f|
+  == render 'shared/error_messages', object: f.object
   == f.input :title
   == f.hidden_field :room_id, value: '1'
+  = f.simple_fields_for :posts do |posts_form|
+    == posts_form.input :author
+    == posts_form.input :content
   div.form-actions
     = f.button :submit, :class => 'btn-primary'
         

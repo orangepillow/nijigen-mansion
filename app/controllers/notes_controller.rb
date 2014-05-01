@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
   def new
     @note = Note.new
+    @note.posts.build
   end
 
   def create
@@ -14,6 +15,7 @@ class NotesController < ApplicationController
 
   private
     def note_params
-      params.require(:note).permit(:title, :room_id)
+      params.require(:note).permit(:title, :room_id,
+                                    posts_attributes: [:author, :content, :note_id])
     end
 end
