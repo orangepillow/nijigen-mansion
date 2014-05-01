@@ -2,6 +2,33 @@
 @import "bootstrap";
 
 $grayLighter: #eaeaea;
+$titleColor: #2c3e50;
+$roomIdColor: #7f8c8d;
+
+$noteIdColor: #7f8c8d;
+$noteBgColor: #ecf0f1;
+
+.note {
+  margin: 1em 0;
+  padding: 1em; 
+  border: 1px solid $grayLighter;
+  background-color: $noteBgColor;
+
+  .room_id {
+    color: $roomIdColor;
+    font-weight: bold;
+  }
+  .note_id {
+    color: $noteIdColor;
+    font-weight: bold;
+  }
+  .note_title {
+    margin: 0;
+    padding: 0;
+    color: $titleColor;
+    font-size: 120%;
+  }
+}
 
 footer {
   margin-top: 1em;
