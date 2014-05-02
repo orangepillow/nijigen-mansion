@@ -9,14 +9,15 @@
         h2.note_title = note.title
   .note__body
     .post
-      .row
-         .col-md-12
-           - if note.posts.first.picture?
-             = image_tag note.posts.first.picture.thumb.url
-      .row
-        .col-md-3
-          span.author = "Name: #{note.posts.first.author}"
-        .col-md-6
+      div class="post-picture row"
+        .col-md-12
+          - if note.posts.first.picture?
+            = image_tag note.posts.first.picture.thumb.url
+      div class="post-body row"
+        div class="post-body__author col-md-3"
+          | Name:
+          span.author = note.posts.first.author
+        div class="post-body__content col-md-6"
           span.context = note.posts.first.content
-        .col-md-3
+        div class="post-body__published col-md-3"
           span.created_at = "#{time_ago_in_words(note.posts.first.created_at)}前"

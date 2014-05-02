@@ -5,7 +5,9 @@
 $base-color: #ecf0f1;
 $main-color: #34495e;
 $accent-color: #e74c3c;
-$base-text-color: darken($base-color, 40%);
+$base-text-color: darken($base-color, 60%);
+$text-color-light: darken($base-color, 30%);
+$line-color: darken($base-color, 10%);
 
 body {
   color: $base-text-color;
@@ -17,6 +19,8 @@ header {
 }
 
 .note {
+  width: 100%;
+  max-width: 650px;
   margin: 1em 0 2em 0;
   padding: 0; 
   background-color: $base-color;
@@ -50,6 +54,31 @@ header {
     padding: 0;
     color: $base-color;
     font-size: 120%;
+  }
+}
+
+.post {
+  .post-picture {
+    padding-bottom: 1em;
+    border-bottom: solid 1px $line-color;
+  }
+
+  .post-body {
+    padding-top: 1em;
+    
+    .post-body__author {
+      .author {
+        font-weight: bold;
+      }
+    }
+
+    .post-body__context {
+
+    }
+
+    .post-body__published {
+      color: $text-color-light;
+    }
   }
 }
 
