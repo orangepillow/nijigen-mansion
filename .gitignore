@@ -23,6 +23,8 @@ pickle-email-*.html
 /vendor/bundle
 
 /public/assets*
+/public/uploads/post
+/public/uploads/tmp
 
 .env
 .foreman

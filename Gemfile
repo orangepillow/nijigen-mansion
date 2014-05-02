@@ -20,6 +20,10 @@ gem 'bcrypt', '~> 3.1.7'
 # decorator
 gem "draper"
 
+# image uploader
+gem 'carrierwave'
+gem 'mini_magick'
+
 gem "simple_form"
 gem "kaminari", github: "amatsuda/kaminari"
 
