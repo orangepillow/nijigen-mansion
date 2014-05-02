@@ -121,6 +121,8 @@ ja:
       too_long: は%{count}文字以内で入力してください。
       too_short: は%{count}文字以上で入力してください。
       wrong_length: は%{count}文字で入力してください。
+      size_too_small: 'はファイルサイズが小さすぎます。少なくとも%{file_size}以上にする必要があります。'
+      size_too_big: 'はファイルサイズが大きすぎます。%{file_size}以内にする必要があります'
       other_than: "は%{count}以外の値にしてください。"
     template:
       body: 次の項目を確認してください。
