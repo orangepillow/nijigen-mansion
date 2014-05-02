@@ -19,4 +19,13 @@ feature 'Note' do
       click_button '登録する'
     }.not_to change(Note, :count)
   end
+
+  scenario '許可された拡張子以外のファイルをアップロードする' do
+    visit notes_new_path
+    fill_in 'Title', with: 'Diary'
+    fill_in 'Content', with: 'Lorem ipsum'
+    attach_file 'Picture', "#{Rails.root}/README.md"
+    click_button '登録する'
+    expect(page).to have_content('error')
+  end
 end
