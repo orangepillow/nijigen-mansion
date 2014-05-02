@@ -5,6 +5,7 @@
   = f.simple_fields_for :posts do |posts_form|
     == posts_form.input :author
     == posts_form.input :content
+    == posts_form.file_field :picture
   div.form-actions
     = f.button :submit, :class => 'btn-primary'
         

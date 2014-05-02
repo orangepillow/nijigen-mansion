@@ -10,6 +10,10 @@
   .note__body
     .post
       .row
+         .col-md-12
+           - if note.posts.first.picture?
+             = image_tag note.posts.first.picture.thumb.url
+      .row
         .col-md-3
           span.author = "Name: #{note.posts.first.author}"
         .col-md-6
