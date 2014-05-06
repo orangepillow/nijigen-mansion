@@ -8,11 +8,10 @@ feature 'Home' do
     expect(page).to have_title 'nijigen-mansion'
   end
 
-  scenario "click help link" do
+  scenario 'click help link' do
     visit root_path
     click_link 'ヘルプ'
 
     expect(page).to have_title 'ヘルプ'
   end
 end
-    
