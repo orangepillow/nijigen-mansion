@@ -14,8 +14,10 @@ class NotesController < ApplicationController
   end
 
   private
-    def note_params
-      params.require(:note).permit(:title, :room_id,
-                                    posts_attributes: [:author, :content, :note_id, :picture])
-    end
+
+  def note_params
+    params.require(:note).permit(:title, :room_id,
+                                 posts_attributes:
+                                 [:author, :content, :note_id, :picture])
+  end
 end
